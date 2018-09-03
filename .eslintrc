@@ -1,0 +1,38 @@
+{
+	"extends": [
+		"prettier",
+		"prettier/react"
+	],
+	"plugins": [
+		"react",
+		"mocha",
+		"prettier",
+		"security"
+	],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"rules": {
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"space-before-function-paren": 0,
+		"mocha/no-exclusive-tests": "error",
+		"no-const-assign": "warn",
+		"no-this-before-super": "warn",
+		"no-undef": "warn",
+		"no-unreachable": "warn",
+		"constructor-super": "warn",
+		"valid-typeof": "warn",
+		"no-unused-vars": "warn"
+	}
+}
