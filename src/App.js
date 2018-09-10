@@ -21,10 +21,20 @@ class App extends Component {
       loader: () => import('./routes/Driver'),
       loading: LoadingPage
     });
+    const LoadableEntryPage = Loadable({
+      loader: () => import('./routes/Entry'),
+      loading: LoadingPage
+    });
+    const LoadableExtraPage = Loadable({
+      loader: () => import('./routes/Extra'),
+      loading: LoadingPage
+    });
 
     return (
       <Switch>
-        <Route exact location={location} path="/" exact component={LoadableMainPage} />
+        <Route exact location={location} path="/" exact component={LoadableEntryPage} />
+        <Route exact location={location} path="/main" exact component={LoadableMainPage} />
+        <Route exact location={location} path="/extra" exact component={LoadableExtraPage} />
         <Route
           exact
           location={location}

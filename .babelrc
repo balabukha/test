@@ -1,22 +1,26 @@
 {
-	"presets": [
-		"es2015",
-		"react"
-	],
-	"plugins": [
-		"react-hot-loader/babel",
-		"react-html-attrs",
-		"transform-decorators-legacy",
-		"transform-class-properties",
-		"transform-object-rest-spread",
-		"syntax-dynamic-import",
-		[
-			"import",
-			{
-				"libraryName": "antd",
-				"libraryDirectory": "es",
-				"style": "css"
-			}
-		]
-	]
+  "presets": ["es2015", "react"],
+  "plugins": [
+    "react-hot-loader/babel",
+    "react-html-attrs",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "syntax-dynamic-import",
+    [
+      "babel-plugin-root-import",
+      {
+        "rootPathSuffix": "./src/",
+        "rootPathPrefix": "@"
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css"
+      }
+    ]
+  ]
 }
